@@ -46,9 +46,11 @@ endif
 
 ifeq ($(strip $(TARGET_ARCH_VARIANT_CPU)),cortex-a8)
 arch_variant_ldflags := \
-
+<<<<<<< HEAD
+        -Wl,--fix-cortex-a8
+=======
 	-Wl,--fix-cortex-a8
 else
 arch_variant_ldflags :=
 endif
-
+>>>>>>> 33f95dc... Add standard method for enabling mfpu and mcpu code optimization
