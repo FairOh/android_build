@@ -402,6 +402,22 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   script.ShowProgress(0.5, 0)
   script.Print("")
+<<<<<<< HEAD
+  script.Print("")
+  script.Print("              rasbeanjelly              ")
+  script.Print("               by rascarlo              ")
+  script.Print("")
+  script.Print("               enjoy the                ")
+  script.Print("....###.....#######...######..########..")
+  script.Print("...##.##...##.....##.##....##.##.....##.")
+  script.Print("..##...##..##.....##.##.......##.....##.")
+  script.Print(".##.....##.##.....##..######..########..")
+  script.Print(".#########.##.....##.......##.##........")
+  script.Print(".##.....##.##.....##.##....##.##........")
+  script.Print(".##.....##..#######...######..##........")
+  script.Print("               experience               ")
+=======
+>>>>>>> f1bba2e... Changed install animations to PSX
   script.Print("")
   script.Print("      ########    ######   #      #     ")
   script.Print("      ##     ##  ##    ##   #    #      ")
@@ -412,11 +428,15 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("      #           ######   #      #     ")
   script.Print("")
   script.Print("")
+<<<<<<< HEAD
+  script.Print("  don't involve rasta in your say say   ")
+=======
   script.Print("            Pure Speed Xperiment        ")
   script.Print("")
   script.Print("")
   script.Print("")
   script.Print("                Buckle Up!              ")
+>>>>>>> f1bba2e... Changed install animations to PSX
   script.Print("")
 
   if OPTIONS.wipe_user_data:
