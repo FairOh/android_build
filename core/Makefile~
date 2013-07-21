@@ -1254,8 +1254,11 @@ name := $(TARGET_PRODUCT)
 ifeq ($(TARGET_BUILD_TYPE),debug)
   name := $(name)_debug
 endif
+<<<<<<< HEAD
+name := rasbeanjelly_$(name)_ota_$(shell date +"%Y-%m-%d")
+=======
 name := PSX_$(name)_ota_$(shell date +"%Y-%m-%d")
-
+>>>>>>> 10544ea... Changed Rom zip name to PSX
 
 INTERNAL_OTA_PACKAGE_TARGET := $(PRODUCT_OUT)/$(name).zip
 
