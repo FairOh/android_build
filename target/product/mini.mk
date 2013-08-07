@@ -196,7 +196,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     drmserver \
     libdrmframework \
-    libdrmframework_jni
+    libdrmframework_jni \
+	WAPPushManager
 
 
 # Additional settings used in all AOSP builds
