@@ -28,7 +28,6 @@ PRODUCT_PACKAGES := \
     Email \
     Exchange2 \
     LatinIME \
-    Launcher2 \
     Settings \
     Sync \
     Updater \

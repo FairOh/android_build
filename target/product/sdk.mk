@@ -27,7 +27,6 @@ PRODUCT_PACKAGES := \
 	Phone \
 	Protips \
 	SystemUI \
-	Launcher2 \
 	Development \
 	DevelopmentSettings \
 	DrmProvider \
@@ -48,8 +47,7 @@ PRODUCT_PACKAGES := \
 	CalendarProvider \
 	SmokeTest \
 	SmokeTestApp \
-	rild \
-	LegacyCamera
+	rild
 
 # Define the host tools and libs that are parts of the SDK.
 -include sdk/build/product_sdk.mk

@@ -30,7 +30,6 @@ PRODUCT_PACKAGES := \
     FusedLocation \
     InputDevices \
     LatinIME \
-    Launcher2 \
     Phone \
     Settings \
     SystemUI \
