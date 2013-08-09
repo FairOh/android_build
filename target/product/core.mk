@@ -29,7 +29,6 @@ PRODUCT_PACKAGES += \
     Contacts \
     ContactsProvider \
     DefaultContainerService \
-    Home \
     KeyChain \
     SharedStorageBackup \
     TelephonyProvider \
