@@ -25,7 +25,6 @@ PRODUCT_PACKAGES := \
 	FusedLocation \
 	Mms \
 	Phone \
-	Protips \
 	SystemUI \
 	Development \
 	DevelopmentSettings \
