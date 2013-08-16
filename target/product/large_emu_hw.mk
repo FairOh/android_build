@@ -27,7 +27,6 @@ PRODUCT_PACKAGES := \
     DrmProvider \
     Email \
     Exchange2 \
-    LatinIME \
     Settings \
     Sync \
     Updater \
