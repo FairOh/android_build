@@ -25,8 +25,6 @@ PRODUCT_PACKAGES := \
     Calculator \
     CertInstaller \
     DrmProvider \
-    Email \
-    Exchange2 \
     Settings \
     Sync \
     Updater \

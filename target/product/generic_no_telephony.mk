@@ -25,8 +25,6 @@ PRODUCT_PACKAGES := \
     Calculator \
     CertInstaller \
     DrmProvider \
-    Email \
-    Exchange2 \
     FusedLocation \
     InputDevices \
     Phone \
