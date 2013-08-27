@@ -171,19 +171,14 @@ $(LOCAL_INTERMEDIATE_TARGETS): PRIVATE_TARGET_GLOBAL_CPPFLAGS := $(TARGET_GLOBAL
 $(LOCAL_INTERMEDIATE_TARGETS): PRIVATE_NO_DEFAULT_COMPILER_FLAGS := \
     $(strip $(LOCAL_NO_DEFAULT_COMPILER_FLAGS))
 
-my_syntax_arch :=
-ifneq ($(strip $(CHECK_SYNTAX)),)
-  my_syntax_prefix := prebuilts/clang/$(HOST_PREBUILT_TAG)/host/3.3/bin
-  ifeq ($(wildcard $(my_syntax_prefix)/ccc-syntax),)
-    $(warning *** Disable checksyntax because $(my_syntax_prefix)/ccc-syntax does not exist)
-    CHECK_SYNTAX :=
-  else
-    ifneq ($(strip $(LOCAL_IS_HOST_MODULE)),)
-      my_syntax_arch := host
-    else
-      my_syntax_arch := $(TARGET_ARCH)
-    endif
-  endif
+ifeq ($(strip $(WITH_SYNTAX_CHECK)),)
+  LOCAL_NO_SYNTAX_CHECK := true
+endif
+
+ifneq ($(strip $(LOCAL_IS_HOST_MODULE)),)
+  my_syntax_arch := host
+else
+  my_syntax_arch := $(TARGET_ARCH)
 endif
 
 ifeq ($(strip $(LOCAL_CC)),)
@@ -193,8 +188,8 @@ ifeq ($(strip $(LOCAL_CC)),)
     LOCAL_CC := $($(my_prefix)CC)
   endif
 endif
-ifneq ($(strip $(CHECK_SYNTAX)),)
-  LOCAL_CC := $(my_syntax_prefix)/ccc-syntax $(my_syntax_arch) "$(LOCAL_CC)"
+ifneq ($(LOCAL_NO_SYNTAX_CHECK),true)
+  LOCAL_CC := $(SYNTAX_TOOLS_PREFIX)/ccc-syntax $(my_syntax_arch) "$(LOCAL_CC)"
 endif
 $(LOCAL_INTERMEDIATE_TARGETS): PRIVATE_CC := $(LOCAL_CC)
 
@@ -205,8 +200,8 @@ ifeq ($(strip $(LOCAL_CXX)),)
     LOCAL_CXX := $($(my_prefix)CXX)
   endif
 endif
-ifneq ($(strip $(CHECK_SYNTAX)),)
-  LOCAL_CXX := $(my_syntax_prefix)/cxx-syntax $(my_syntax_arch) "$(LOCAL_CXX)"
+ifneq ($(LOCAL_NO_SYNTAX_CHECK),true)
+  LOCAL_CXX := $(SYNTAX_TOOLS_PREFIX)/cxx-syntax $(my_syntax_arch) "$(LOCAL_CXX)"
 endif
 $(LOCAL_INTERMEDIATE_TARGETS): PRIVATE_CXX := $(LOCAL_CXX)
 
