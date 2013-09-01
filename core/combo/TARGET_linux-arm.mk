@@ -69,15 +69,7 @@ endif
 TARGET_NO_UNDEFINED_LDFLAGS := -Wl,--no-undefined
 
 TARGET_arm_CFLAGS :=    -O3 \
-                        -fgcse-after-reload \
-                        -fipa-cp-clone \
-                        -fpredictive-commoning \
-                        -fsched-spec-load \
-                        -ftree-loop-distribution \
-                        -ftree-loop-linear \
                         -fomit-frame-pointer \
-                        -fvect-cost-model \
-                        -funroll-loops \
                         -fstrict-aliasing    \
                         -funswitch-loops \
                         -funsafe-loop-optimizations \
@@ -92,8 +84,6 @@ TARGET_thumb_CFLAGS :=  -mthumb \
                         -fstrict-aliasing \
                         -funsafe-math-optimizations \
                         -Wstrict-aliasing=2 \
-                        -fgcse-after-reload \
-                        -funroll-loops \
                         -fno-strict-aliasing \
                         -pipe
 
@@ -116,8 +106,8 @@ TARGET_thumb_CFLAGS +=  -Wno-unused-parameter \
 # with -mlong-calls.  When built at -O0, those libraries are
 # too big for a thumb "BL <label>" to go from one end to the other.
 ifeq ($(FORCE_ARM_DEBUGGING),true)
-  TARGET_arm_CFLAGS += -fno-strict-aliasing -Wno-error=strict-aliasing
-TARGET_thumb_CFLAGS += -fno-strict-aliasing -Wno-error=strict-aliasing
+  TARGET_arm_CFLAGS += -fno-omit-frame-pointer -fno-strict-aliasing
+  TARGET_thumb_CFLAGS += -marm -fno-omit-frame-pointer
 endif
 
 ifeq ($(TARGET_DISABLE_ARM_PIE),true)
@@ -136,7 +126,7 @@ TARGET_GLOBAL_CFLAGS += \
 			-fstack-protector \
 			-Wa,--noexecstack \
 			-Werror=format-security \
-			-D_FORTIFY_SOURCE=2 \
+			-D_FORTIFY_SOURCE=0 \
 			-fno-short-enums \
 			-pipe \
 			$(arch_variant_cflags)
