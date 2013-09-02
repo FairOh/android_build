@@ -74,7 +74,7 @@ TARGET_arm_CFLAGS :=    -O3 \
                         -funswitch-loops \
                         -funsafe-loop-optimizations \
                         -ftree-vectorize \
-                        -Wstrict-aliasing=3 \
+                        -Wstrict-aliasing=2 \
                         -pipe
 
 # Modules can choose to compile some source as thumb.
@@ -126,7 +126,7 @@ TARGET_GLOBAL_CFLAGS += \
 			-fstack-protector \
 			-Wa,--noexecstack \
 			-Werror=format-security \
-			-D_FORTIFY_SOURCE=0 \
+			-D_FORTIFY_SOURCE=1 \
 			-fno-short-enums \
 			-pipe \
 			$(arch_variant_cflags)
