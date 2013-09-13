@@ -71,7 +71,7 @@ TARGET_NO_UNDEFINED_LDFLAGS := -Wl,--no-undefined
 TARGET_arm_CFLAGS :=    -O3 \
                         -fomit-frame-pointer \
                         -fstrict-aliasing    \
-                        -funswitch-loops \
+                        -funroll-loops \
                         -funsafe-loop-optimizations \
                         -ftree-vectorize \
                         -Wstrict-aliasing=2 \
@@ -85,6 +85,7 @@ TARGET_thumb_CFLAGS :=  -mthumb \
                         -funsafe-math-optimizations \
                         -Wstrict-aliasing=2 \
                         -fno-strict-aliasing \
+                        -funroll-loops \
                         -pipe
 
 #SHUT THE F$#@ UP!
