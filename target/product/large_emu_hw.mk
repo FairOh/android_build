@@ -25,6 +25,7 @@ PRODUCT_PACKAGES := \
     Calculator \
     CertInstaller \
     DrmProvider \
+    LatinIME \
     Settings \
     Sync \
     Updater \
