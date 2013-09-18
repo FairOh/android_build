@@ -66,6 +66,8 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_vpxenc \
     libvariablespeed \
     libwebrtc_audio_preprocessing \
+    make_ext4fs \
+    libminiz \
     mdnsd \
     mms-common \
     requestsync \

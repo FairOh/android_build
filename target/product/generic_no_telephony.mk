@@ -27,6 +27,7 @@ PRODUCT_PACKAGES := \
     DrmProvider \
     FusedLocation \
     InputDevices \
+    LatinIME \
     Phone \
     Settings \
     SystemUI \
