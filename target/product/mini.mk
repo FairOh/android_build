@@ -143,6 +143,7 @@ PRODUCT_PACKAGES += \
     libwilhelm \
     libz \
     mdnsd \
+    libminiz \
     network \
     pand \
     requestsync \
@@ -163,6 +164,7 @@ PRODUCT_PACKAGES += \
     Bluetooth \
     FusedLocation \
     InputDevices \
+    LatinIME \
     Phone \
     hostapd \
     wpa_supplicant.conf
