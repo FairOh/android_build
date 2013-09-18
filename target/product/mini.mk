@@ -164,6 +164,7 @@ PRODUCT_PACKAGES += \
     Bluetooth \
     FusedLocation \
     InputDevices \
+    LatinIME \
     Phone \
     hostapd \
     wpa_supplicant.conf
