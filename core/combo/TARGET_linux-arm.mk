@@ -72,7 +72,8 @@ TARGET_arm_CFLAGS :=    -O3 \
                         -fomit-frame-pointer \
                         -fstrict-aliasing    \
                         -funroll-loops \
-                        -funsafe-loop-optimizations \
+                        -ftree-loop-distribution \
+                        -ftree-loop-linear \
                         -ftree-vectorize \
                         -Wstrict-aliasing=2 \
                         -pipe
