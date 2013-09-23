@@ -28,6 +28,7 @@ PRODUCT_PACKAGES := \
     FusedLocation \
     InputDevices \
     LatinIME \
+    MusicFX \
     Phone \
     Settings \
     SystemUI \
